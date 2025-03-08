@@ -24,7 +24,7 @@ public class Database {
             for (int i = 1; i < lines.size(); i++) {
                 String line = lines.get(i);
                 String[] element = line.split(";");
-                if (element.length < 6) continue; // Menghindari error jika data kurang dari 6 kolom
+                if (element.length < 6) continue; 
                 String nim = element[0];
                 String nama = element[1];
                 String alamat = element[2];
@@ -41,7 +41,7 @@ public class Database {
 
     public void save() {
         StringBuilder sb = new StringBuilder();
-        sb.append("NIM;NAMA;ALAMAT(KOTA);SEMESTER;SKS;IPK\n"); // Header diperbaiki agar sesuai dengan separator
+        sb.append("NIM;NAMA;ALAMAT(KOTA);SEMESTER;SKS;IPK\n"); 
 
         for (Mahasiswa mhs : data) {
             String line = String.format("%s;%s;%s;%d;%d;%.2f%n",
